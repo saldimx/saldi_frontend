@@ -1,0 +1,6 @@
+.auth-background-holder {
+    background: url(https://rentpath-res.cloudinary.com/$img_current/t_3x2_webp_xl/t_unpaid/73b12775a38bb32b909a91384647a3d5) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 100%;
+}
