@@ -6,7 +6,8 @@ import { Login } from './paginas/Login';
 import { Signup} from './paginas/Signup';
 import { Reset } from './paginas/Reset-password';
 import { Error } from './paginas/Error';
-
+import { Exito } from './paginas/exito';
+import { Test } from './paginas/test';
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
             <Route path="reset" element={<Reset />} />
+            <Route path="exito" element={<Exito/>} />
             <Route path="*" element={<Error />} />
+            <Route path="test" element={<Test/>} />
           </Route>  
         </Routes>
       </BrowserRouter>
