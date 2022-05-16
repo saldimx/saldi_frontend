@@ -1,6 +1,6 @@
 import React, { useState }  from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import { useNavigate } from "react-router-dom" 
+import { useNavigate } from "react-router-dom" 
 //import '../css/portal.css';
 import { Link } from "react-router-dom";
 import { valida } from "../apis/password";
@@ -17,7 +17,7 @@ export const Signup = () => {
   //let {data:resp, isDAta:setResp} = useState('');
   let [mensaje, setMensaje] = useState('');
   //let [data, setData] = useState('');
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   //if(!setResp){
   //  return (
   //  <div className="">
@@ -41,8 +41,8 @@ export const Signup = () => {
 //    }
 //    return <AlertaOff />;
 //  }   
-  //const API_BASE_URL = 'https://app-itj-bootcamp.herokuapp.com';
-  const API_BASE_URL = 'http://localhost:5000';
+  const API_BASE_URL = 'https://app-itj-bootcamp.herokuapp.com';
+  //const API_BASE_URL = 'http://localhost:5000';
 
 
 
@@ -70,7 +70,7 @@ export const Signup = () => {
 //        console.error('Error:', error);
 //      });
 
-    //  navigate('/exito', { replace: true });
+      navigate('/mensaje', { replace: true });
     }  
      
   }

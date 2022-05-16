@@ -5,3 +5,10 @@
 .text-ar {
     float: right;
 }
+
+.w{
+    width: 280px;
+}
+.g{
+    grid-template-columns: 1fr 2fr;
+}

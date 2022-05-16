@@ -8,6 +8,8 @@ import { Reset } from './paginas/Reset-password';
 import { Error } from './paginas/Error';
 import { Exito } from './paginas/exito';
 import { Test } from './paginas/test';
+import { Admin } from './admin/admin';
+import { Mensaje } from './paginas/mensaje';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="exito" element={<Exito/>} />
             <Route path="*" element={<Error />} />
             <Route path="test" element={<Test/>} />
+            <Route path="mensaje" element={<Mensaje/>} />
+            <Route path="admin" element={<Admin/>} />
           </Route>  
         </Routes>
       </BrowserRouter>
