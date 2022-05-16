@@ -49,30 +49,24 @@ export const Signup = () => {
   const handleSubmit = (e) =>{
   e.preventDefault();  
   setMensaje(mensaje = valida(pass1));
-    if (pass1 !== pass2){
-      setMensaje(mensaje = 'La contraseña no coincide');
-      console.log(mensaje);
+    if (pass1.length <= 8 ){
+      setMensaje(mensaje = 'La contraseña debe de tener almenos 8 caracteres');
     }else{
-      //const password = encriptar(pass);
-        fetch(`${API_BASE_URL}/usuario?n=${name}&e=${email}&p=${pass1}`, {
-        method: 'POST',
-        //body: JSON.stringify(dataInfo),
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      });
-     
-      //.then((res) => res.json())
-//      .then(data => {
-//        console.log('Success:', data);
-//      })
-//      .catch((error) => {
-//        console.error('Error:', error);
-//      });
-
-      navigate('/mensaje', { replace: true });
-    }  
-     
+      if (pass1 !== pass2){
+        setMensaje(mensaje = 'La contraseña no coincide');
+        console.log(mensaje);
+      }else{
+        //const password = encriptar(pass);
+          fetch(`${API_BASE_URL}/usuario?n=${name}&e=${email}&p=${pass1}`, {
+          method: 'POST',
+          //body: JSON.stringify(dataInfo),
+          headers: {
+            'Content-Type': 'application/json'
+          },
+        });
+        navigate('/mensaje', { replace: true });
+      } 
+    } 
   }
 
   
@@ -133,6 +127,12 @@ export const Signup = () => {
 				<hr className="my-4"/>
 				<small className="text-muted">Ya tengo cuenta <Link to="/login" className="text-link">Iniciar Sesión</Link></small>
 			</form>
+      <br/>
+      { mensaje ? 
+      <div className="alert alert-danger" role="alert">
+        {mensaje}
+      </div> : ""}
+      
 			</div>
 		</div>
 		</div>
