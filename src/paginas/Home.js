@@ -26,18 +26,19 @@ export const Home = () => {
     </header>
   </div>
 
- 
-          <main>
-          <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-            <div className="col-md-5 p-lg-5 mx-auto my-5">
-              <h1 className="display-4 fw-normal">Punny headline</h1>
-              <p className="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-              <a className="btn btn-outline-secondary" href="#a">Coming soon</a>
-            </div>
-            <div className="product-device shadow-sm d-none d-md-block"></div>
-            <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-          </div>
-          </main>
+  <div className="container py-4">
+<div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">sevende.com</h1>
+        <p class="col-md-8 fs-4">Hola, nosotros somos seVende. La mejor opcion para que tengas tu tienda en linea totalmente GRATIS!!</p>
+        <br/>
+        <p class="col-md-8 fs-4">Estas visitandonos para comprar?  entonces busca lo que necesites</p>
+        <button class="btn btn-primary btn-lg" type="button">Buscar</button>
+      </div>
+    </div>
+</div>
+
+
         </>
       )
     };

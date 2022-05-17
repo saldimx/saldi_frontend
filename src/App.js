@@ -10,6 +10,7 @@ import { Exito } from './paginas/exito';
 import { Test } from './paginas/test';
 import { Admin } from './admin/admin';
 import { Mensaje } from './paginas/mensaje';
+import { Shop } from './paginas/Shop';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="test" element={<Test/>} />
             <Route path="mensaje" element={<Mensaje/>} />
             <Route path="admin" element={<Admin/>} />
+            <Route path="shop/:id" element={<Shop/>}/>
           </Route>  
         </Routes>
       </BrowserRouter>
