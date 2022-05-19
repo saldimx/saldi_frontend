@@ -11,6 +11,7 @@ import { Test } from './paginas/test';
 import { Admin } from './admin/admin';
 import { Mensaje } from './paginas/mensaje';
 import { Shop } from './paginas/Shop';
+import { About } from './paginas/About';
 
 function App() {
   return (
@@ -18,16 +19,17 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
-            <Route path="reset" element={<Reset />} />
+            <Route path="about" element={<About/>} />
             <Route path="exito" element={<Exito/>} />
             <Route path="*" element={<Error />} />
             <Route path="test" element={<Test/>} />
-            <Route path="mensaje" element={<Mensaje/>} />
-            <Route path="admin" element={<Admin/>} />
-            <Route path="shop/:id" element={<Shop/>}/>
           </Route>  
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="reset" element={<Reset />} />
+          <Route path="shop/:id" element={<Shop/>}/>
+          <Route path="admin" element={<Admin/>} />
+          <Route path="mensaje/:id" element={<Mensaje/>} />
         </Routes>
       </BrowserRouter>
   );

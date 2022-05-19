@@ -12,3 +12,46 @@
 .g{
     grid-template-columns: 1fr 2fr;
 }
+
+.c{
+    background: #AFA9F6;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 15px;
+}
+
+.btn-color {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+.btn:hover {
+    background-color: #1a1a1a;
+    color:#fff;
+}
+.textRight {
+    text-align: right!important;
+}
+.nodec{
+    text-decoration: none;
+}
+
+.circular_image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .circular_image img{
+    width:100%;
+  }
+
+  .f{
+        float: right;
+  }

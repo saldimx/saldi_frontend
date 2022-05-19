@@ -1,13 +1,8 @@
 import React, { useState }  from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom" 
-//import '../css/portal.css';
 import { Link } from "react-router-dom";
-import { valida } from "../apis/password";
-
-
-
-
+//import { valida } from "../apis/password";
 
 export const Signup = () => {
   const [name, setName] = useState('');
@@ -18,29 +13,7 @@ export const Signup = () => {
   let [mensaje, setMensaje] = useState('');
   //let [data, setData] = useState('');
   const navigate = useNavigate();
-  //if(!setResp){
-  //  return (
-  //  <div className="">
-  //    <h1>El usurio se grabo con exito</h1> 
-  //    <Link to="/login" className="text-link">Ya puedes iniciar sesion</Link>.
-  //  </div>    
-  //  );
-  //}
-  
-//  function AlertaOn(props) {
-//    return <div className="alert alert-danger">{mensaje}</div>;
-//  }
-//  function AlertaOff(props) {
-//    return <h1>Please sign up.</h1>;
-//  }
-  
-//  function Alerta(props) {
-//    const isOn = props.isLoggedIn;
-//    if (!isOn) {
-//      return <AlertaOn />;
-//    }
-//    return <AlertaOff />;
-//  }   
+
   const API_BASE_URL = 'https://app-itj-bootcamp.herokuapp.com';
   //const API_BASE_URL = 'http://localhost:5000';
 
@@ -48,7 +21,7 @@ export const Signup = () => {
 
   const handleSubmit = (e) =>{
   e.preventDefault();  
-  setMensaje(mensaje = valida(pass1));
+  //setMensaje(mensaje = valida(pass1));
     if (pass1.length <= 8 ){
       setMensaje(mensaje = 'La contraseña debe de tener almenos 8 caracteres');
     }else{
@@ -64,7 +37,7 @@ export const Signup = () => {
             'Content-Type': 'application/json'
           },
         });
-        navigate('/mensaje', { replace: true });
+        navigate('/mensaje/a', { replace: true });
       } 
     } 
   }
