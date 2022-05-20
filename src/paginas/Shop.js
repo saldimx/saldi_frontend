@@ -1,5 +1,4 @@
 import React  from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from "react-router";
 import image  from "../img/circled-s.png"; 
 import '../css/style.css';
@@ -70,16 +69,16 @@ export const Shop = () => {
 			<img className="img-fluid img_p" src="https://cartzilla.createx.studio/img/shop/catalog/33.jpg" alt=""/>
 				<p>PIX BAR PERFORMANCE WORKOUT TANK TOP</p><h3 className="text-left">$10</h3>
 				<div className="textRight">
-					<a className="p-2 link-secondary nodec" href="/products/2">Details</a>
-					<button className="btn btn-color btn-sm mrigth-2">Add to cart</button>
+					<a className="p-2 link-secondary nodec" href="/products/2">Detalle</a>
+					<button className="boton boton-color boton-sm mrigth-2">Agregar al carrito</button>
 				</div>
 			</div>
 			<div className="card card-body">
 			<img className="img-fluid img_p" src="https://cartzilla.createx.studio/img/shop/catalog/33.jpg" alt=""/>
 				<p>PIX BAR PERFORMANCE WORKOUT TANK TOP</p><h3 className="text-left">$10</h3>
 				<div className="textRight">
-					<a className="p-2 link-secondary nodec" href="/products/2">Details</a>
-					<button className="btn btn-color btn-sm mrigth-2">Add to cart</button>
+					<a className="p-2 link-secondary nodec" href="/products/2">Detalle</a>
+					<button className="boton boton-color boton-sm mrigth-2">Agregar al carrito</button>
 				</div>
 			</div>
 		</div>

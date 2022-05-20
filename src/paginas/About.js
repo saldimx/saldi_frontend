@@ -1,20 +1,36 @@
 import React  from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import { Slider } from "../components/slide";
  
 export const About = () => {
     return (
         <>
-		<main>
-			<div className="container col-xl-10 col-xxl-8 px-4 py-5">
-			<div className="row align-items-center g-lg-5 py-5">
-				<div className="col-lg-7 text-center text-lg-start">
-				<h1 className="display-4 fw-bold lh-1 mb-3">Que es Saldi</h1>
-				<p className="col-lg-12 fs-4">Saldi es una plataforma que te permite tener tu propia tienda en internet totalmente GRATIS.</p>
-				<p className="col-lg-12 fs-4">Tu tienda en linea es una oportunidad para que incrementes tus ventas, tendras tu propia direccion web apra compartir con tus clientes o en tus redes sociales.</p>
-				</div>
-			</div>
-			</div>
-		</main>
+		<div className="container">
+      <div className="row">
+        <div className="offset-lg-2 col-lg-8 col-md-12 col-12 mb-12">
+   
+          <h1 className="display-2 fw-bold mb-3">Hola, somos <span className="text-primary">Saldi</span></h1>
+    
+          <p className="h3 mb-3 ">Saldi es una plataforma que te permite tener tu propia tienda en internet totalmente GRATIS.</p>
+          <p className="mb-0 h5 text-body lh-lg">Saldi es tu tienda en linea es una oportunidad para que incrementes tus ventas, tendras tu propia direccion web apra compartir con tus clientes o en tus redes sociales..</p>
+        <br/>
+		</div>
+		
+		<br/>
+		<hr/>
+
+		<div className="offset-lg-2 col-lg-8 col-md-12 col-12 mb-12">
+   
+		<h1 class="display-4 fw-bold mb-3">Conoce a nuestro equipo</h1>
+
+		<div className="gallery mb-12">
+		<Slider/>
+      </div>
+ </div>
+      </div>
+
+    </div>
+
         </>
       )
     };

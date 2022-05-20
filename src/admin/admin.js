@@ -1,79 +1,86 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
+import '../css/dashboard.css';
 
-import '../css/style.css';
+import { Outlet } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faShop, faDashboard, faGear, faQuestion, faUser } from "@fortawesome/free-solid-svg-icons"
 
-
+const tablero = <FontAwesomeIcon icon={faDashboard} />
+const productos = <FontAwesomeIcon icon={faShop} />
+const gear = <FontAwesomeIcon icon={faGear} />
+const perfil = <FontAwesomeIcon icon={faUser} />
+const ayuda = <FontAwesomeIcon icon={faQuestion} />
 
 export const Admin = () => {
     return(
     <>
-    <main>
-    <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark w"  >
-    <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <svg className="bi me-2" width="40" height="32"> </svg>
-      <span className="fs-4">Sidebar</span>
-    </a>
-    <hr/>
-    <ul className="nav nav-pills flex-column mb-auto">
-      <li className="nav-item">
-        <a href="/" className="nav-link active" aria-current="page">
-          <svg className="bi me-2" width="16" height="16"> </svg>
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="/" className="nav-link text-white">
-          <svg className="bi me-2" width="16" height="16"> </svg>
-          Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="/" className="nav-link text-white">
-          <svg className="bi me-2" width="16" height="16"> </svg>
-          Orders
-        </a>
-      </li>
-      <li>
-        <a href="/" className="nav-link text-white">
-          <svg className="bi me-2" width="16" height="16"> </svg>
-          Products
-        </a>
-      </li>
-      <li>
-        <a href="/" className="nav-link text-white">
-          <svg className="bi me-2" width="16" height="16"> </svg>
-          Customers
-        </a>
-      </li>
-    </ul>
-    <hr/>
-    <div className="dropdown">
-      <a href="/" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2"/>
-        <strong>mdo</strong>
-      </a>
-      <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-        <li><a className="dropdown-item" href="/">New project...</a></li>
-        <li><a className="dropdown-item" href="/">Settings</a></li>
-        <li><a className="dropdown-item" href="/">Profile</a></li>
-        <li><hr className="dropdown-divider"/></li>
-        <li><a className="dropdown-item" href="/">Sign out</a></li>
-      </ul>
-    </div>
-  </div>
+ <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#s">Saldi</a>
 
-  <div className="container-fluid pb-3">
-    <div className="d-grid gap-3 g">
-      <div className="bg-light border rounded-3">
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-      </div>
-      <div className="bg-light border rounded-3">
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <input className="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"></input>
+        <button className="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="navbar-nav">
+          <div className="nav-item text-nowrap">
+            <a className="nav-link px-3" href="#a">Cerrar Sesion</a>
+          </div>
+        </div>
+      </header>
+      <div className="container-fluid">
+      <div className="row">
+        <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" >
+          <div className="position-sticky pt-3">
+            <ul className="nav flex-column">
+              <li className="nav-item">
+              <Link 
+                to="/admin/tablero"
+                className='nav-link' 
+              > {tablero} Tablero
+              </Link>
+              </li>
+              <li className="nav-item">
+              <Link 
+                to="/admin/productos"
+                className='nav-link' 
+              > {productos} Productos
+              </Link>
+              </li>
+            </ul>
+            <hr/>
+            <ul className="nav flex-column">
+              <li className="nav-item">
+              <Link 
+                to="/admin/ajustes"
+                className='nav-link' 
+              > {gear} Ajustes
+              </Link>
+              </li>
+              <li className="nav-item">
+              <Link 
+                to="/admin/perfil"
+                className='nav-link' 
+              > {perfil} Perfil
+              </Link>
+              <Link 
+                to="/admin/ayuda"
+                className='nav-link' 
+              > {ayuda} Ayuda
+              </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <br/>
+          <Outlet/>
+        
+      
+        </main>
       </div>
     </div>
-  </div>
-  </main>
     </>
       )
     };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Layout } from './paginas/Layout';
 import { Home} from './paginas/Home';
 import { Login } from './paginas/Login';
@@ -8,10 +9,14 @@ import { Reset } from './paginas/Reset-password';
 import { Error } from './paginas/Error';
 import { Exito } from './paginas/exito';
 import { Test } from './paginas/test';
-import { Admin } from './admin/admin';
 import { Mensaje } from './paginas/mensaje';
 import { Shop } from './paginas/Shop';
 import { About } from './paginas/About';
+
+import {Admin} from './admin/Admin';
+import {Tablero} from './admin/Tablero';
+import {Productos} from './admin/Productos';
+import {NoPage} from './admin/NoPage';
 
 function App() {
   return (
@@ -30,6 +35,12 @@ function App() {
           <Route path="shop/:id" element={<Shop/>}/>
           <Route path="admin" element={<Admin/>} />
           <Route path="mensaje/:id" element={<Mensaje/>} />
+          <Route path="/" element={<Admin />}>
+              <Route index element={<Tablero />} />
+              <Route path="admin/tablero" element={<Tablero />} />
+              <Route path="admin/productos" element={<Productos />} />
+              <Route path="admin/*" element={<NoPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
   );
