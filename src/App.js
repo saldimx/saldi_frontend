@@ -29,13 +29,14 @@ function App() {
             <Route path="*" element={<Error />} />
             <Route path="test" element={<Test/>} />
           </Route>  
+          
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="reset" element={<Reset />} />
           <Route path="shop/:id" element={<Shop/>}/>
-          <Route path="admin" element={<Admin/>} />
           <Route path="mensaje/:id" element={<Mensaje/>} />
-          <Route path="/" element={<Admin />}>
+        
+          <Route path="/admin" element={<Admin />}>
               <Route index element={<Tablero />} />
               <Route path="tablero" element={<Tablero />} />
               <Route path="productos" element={<Productos />} />
