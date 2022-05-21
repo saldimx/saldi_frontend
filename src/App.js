@@ -37,9 +37,9 @@ function App() {
           <Route path="mensaje/:id" element={<Mensaje/>} />
           <Route path="/" element={<Admin />}>
               <Route index element={<Tablero />} />
-              <Route path="admin/tablero" element={<Tablero />} />
-              <Route path="admin/productos" element={<Productos />} />
-              <Route path="admin/*" element={<NoPage />} />
+              <Route path="tablero" element={<Tablero />} />
+              <Route path="productos" element={<Productos />} />
+              <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
