@@ -12,7 +12,7 @@ const gear = <FontAwesomeIcon icon={faGear} />
 const perfil = <FontAwesomeIcon icon={faUser} />
 const ayuda = <FontAwesomeIcon icon={faQuestion} />
 
-export const Admin = () => {
+export const AdminLayout = () => {
     return(
     <>
     <header 

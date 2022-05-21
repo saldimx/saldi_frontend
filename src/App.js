@@ -13,7 +13,7 @@ import { Mensaje } from './paginas/mensaje';
 import { Shop } from './paginas/Shop';
 import { About } from './paginas/About';
 
-import {Admin} from './admin/Admin';
+import {AdminLayout} from './admin/AdminLayout';
 import {Tablero} from './admin/Tablero';
 import {Productos} from './admin/Productos';
 import {NoPage} from './admin/NoPage';
@@ -29,14 +29,14 @@ function App() {
             <Route path="*" element={<Error />} />
             <Route path="test" element={<Test/>} />
           </Route>  
-          
+
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="reset" element={<Reset />} />
           <Route path="shop/:id" element={<Shop/>}/>
           <Route path="mensaje/:id" element={<Mensaje/>} />
         
-          <Route path="/admin" element={<Admin />}>
+          <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Tablero />} />
               <Route path="tablero" element={<Tablero />} />
               <Route path="productos" element={<Productos />} />
