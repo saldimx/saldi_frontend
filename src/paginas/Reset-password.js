@@ -1,17 +1,31 @@
-import React  from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState }  from "react";
+import { useNavigate } from "react-router-dom"; 
 import { Link } from "react-router-dom";
  
 export const Reset = () => {
+	const [email, setEmail] = useState('');
+	const navigate = useNavigate();
+
+	const handleSubmit = (e) =>{
+		e.preventDefault();  
+		console.log(email)
+		
+		navigate('/mensaje/b', { replace: true });
+	}
     return (
         <>
 	<main>
 		<div className="container col-xl-10 col-xxl-8 px-4 py-5">
 		<div className="row align-items-center g-lg-5 py-5">
 			<div className="col-md-10 mx-auto col-lg-5">
-			<form className="p-4 p-md-5 border rounded-3 bg-light">
+			<form onSubmit={handleSubmit} className="p-4 p-md-5 border rounded-3 bg-light">
 				<div className="form-floating mb-3">
-				<input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
+				<input 
+					type="email" 
+					className="form-control" 
+					id="floatingInput" 
+					placeholder="name@example.com"
+					onChange={e=>setEmail(e.target.value)}/>
 				<label htmlFor="floatingInput">Correo electronico</label>
 				</div>
 				<button className="w-100 btn btn-lg btn-primary" type="submit">Rstablecer Contraseña</button>
