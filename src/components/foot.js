@@ -19,9 +19,9 @@ export const Foot = () => {
           <div className="col-12 col-md">
             <span className="text-muted">© 2022 Saldi, Co.</span>
             <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <li className="ms-3"><a className="text-muted" href="/">{fb}</a></li>
-              <li className="ms-3"><a className="text-muted" href="/">{insta}</a></li>
-              <li className="ms-3"><a className="text-muted" href="/">{link}</a></li>
+              <li className="ms-3"><a className="text-muted" href="https://www.facebook.com/www.saldi.mx">{fb}</a></li>
+              <li className="ms-3"><a className="text-muted" href="https://www.instagram.com/saldi.mx/">{insta}</a></li>
+              <li className="ms-3"><a className="text-muted" href="https://www.linkedin.com/company/saldi-mx/">{link}</a></li>
             </ul>
           </div>
           <div className="col-6 col-md">
