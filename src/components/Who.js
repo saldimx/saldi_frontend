@@ -12,7 +12,7 @@ export const Who = () => {
               <span className="text-primary">construyendo espacios de EComerce para pymes</span>.
             </h2>
             <p className="fs-lg text-muted mb-6">
-              Hemos creado multiples plataformas de negocio y vendido licencias de nuestra plataforma SaaS.
+              Hemos creado multiples plataformas de negocio y vendido licencias de nuestra plataforma SAAS.
             </p>
            
             <div className="d-flex">
