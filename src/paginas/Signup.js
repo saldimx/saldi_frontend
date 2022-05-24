@@ -2,6 +2,9 @@ import React, { useState }  from "react";
 import { useNavigate } from "react-router-dom" 
 import { Link } from "react-router-dom";
 //import { valida } from "../apis/password";
+//import sha256 from "crypto-js/sha256";
+//import * as sha256 from 'crypto-js/sha256';
+//import sha256 = require("crypto-js/sha256");
 
 export const Signup = () => {
   const [name, setName] = useState('');
@@ -28,8 +31,11 @@ export const Signup = () => {
         setMensaje(mensaje = 'La contraseña no coincide');
         console.log(mensaje);
       }else{
-        //const password = encriptar(pass);
-          fetch(`${API_BASE_URL}/usuario?n=${name}&e=${email}&p=${pass1}`, {
+          //pass1 = sha256(pass1).toString();//mn01
+          var cryptoSHA256 = require("crypto-js/sha256");
+          var passX = cryptoSHA256(pass1);
+
+          fetch(`${API_BASE_URL}/usuario?n=${name}&e=${email}&p=${passX}`, {
           method: 'POST',
           //body: JSON.stringify(dataInfo),
           headers: {
