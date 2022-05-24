@@ -1,8 +1,9 @@
 import  { useState, useEffect } from 'react'
+import { API_URL } from "../apis/endpoint";
 
 export function useSearch(text) {
     //console.log(text)
-    const API_URL = 'https://jsonmock.hackerrank.com/api/moviesdata';
+    //const API_URL = 'https://jsonmock.hackerrank.com/api/moviesdata';
     const [detailSearch, setDetailSearch] = useState({
     data: {},
     isLoading: true,

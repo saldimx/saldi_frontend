@@ -1,6 +1,7 @@
 import React, { useState }  from "react";
 import { useNavigate } from "react-router-dom" 
 import { Link } from "react-router-dom";
+import { API_URL } from "../apis/endpoint";
 //import { valida } from "../apis/password";
 
 export const Signup = () => {
@@ -13,7 +14,7 @@ export const Signup = () => {
   //let [data, setData] = useState('');
   const navigate = useNavigate();
 
-  const API_BASE_URL = 'https://app-itj-bootcamp.herokuapp.com';
+  //const API_BASE_URL = 'https://app-itj-bootcamp.herokuapp.com';
   //const API_BASE_URL = 'http://localhost:5000';
 
 
@@ -29,7 +30,7 @@ export const Signup = () => {
         console.log(mensaje);
       }else{
         //const password = encriptar(pass);
-          fetch(`${API_BASE_URL}/usuario?n=${name}&e=${email}&p=${pass1}`, {
+          fetch(`${API_URL}/usuario?n=${name}&e=${email}&p=${pass1}`, {
           method: 'POST',
           //body: JSON.stringify(dataInfo),
           headers: {
