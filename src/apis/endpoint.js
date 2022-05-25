@@ -1,3 +1,3 @@
-export const API_URL ="https://app-itj-bootcamp.herokuapp.com";
+export const API_URL ="https://app-saldi-backend.herokuapp.com";
 
 
