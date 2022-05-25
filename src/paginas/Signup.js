@@ -1,29 +1,19 @@
 import React, { useState }  from "react";
 import { useNavigate } from "react-router-dom" 
 import { Link } from "react-router-dom";
-//import { valida } from "../apis/password";
-//import sha256 from "crypto-js/sha256";
-//import * as sha256 from 'crypto-js/sha256';
-//import sha256 = require("crypto-js/sha256");
+import { API_URL } from "../apis/endpoint";
 
 export const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [pass1, setPass1] = useState('');
   const [pass2, setPass2] = useState('');
-  //let {data:resp, isDAta:setResp} = useState('');
   let [mensaje, setMensaje] = useState('');
-  //let [data, setData] = useState('');
   const navigate = useNavigate();
-
-  const API_BASE_URL = 'https://app-itj-bootcamp.herokuapp.com';
-  //const API_BASE_URL = 'http://localhost:5000';
-
 
 
   const handleSubmit = (e) =>{
   e.preventDefault();  
-  //setMensaje(mensaje = valida(pass1));
     if (pass1.length <= 8 ){
       setMensaje(mensaje = 'La contraseña debe de tener almenos 8 caracteres');
     }else{
@@ -32,12 +22,11 @@ export const Signup = () => {
         console.log(mensaje);
       }else{
           //pass1 = sha256(pass1).toString();//mn01
-          var cryptoSHA256 = require("crypto-js/sha256");
-          var passX = cryptoSHA256(pass1);
+          const cryptoSHA256 = require("crypto-js/sha256");
+          const passX = cryptoSHA256(pass1);
 
-          fetch(`${API_BASE_URL}/usuario?n=${name}&e=${email}&p=${passX}`, {
+          fetch(`${API_URL}/usuario?n=${name}&e=${email}&p=${passX}`, {
           method: 'POST',
-          //body: JSON.stringify(dataInfo),
           headers: {
             'Content-Type': 'application/json'
           },
