@@ -12,6 +12,7 @@ import { Test } from './paginas/test';
 import { Mensaje } from './paginas/mensaje';
 import { Shop } from './paginas/Shop';
 import { About } from './paginas/About';
+import { Politicas } from './paginas/Politicas';
 
 import {AdminLayout} from './admin/AdminLayout';
 import {Tablero} from './admin/Tablero';
@@ -28,6 +29,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About/>} />
             <Route path="exito" element={<Exito/>} />
+            <Route path="politicas" element={<Politicas/>} />
             <Route path="*" element={<Error />} />
             <Route path="test" element={<Test/>} />
           </Route>  

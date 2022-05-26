@@ -45,7 +45,7 @@ export const Foot = () => {
             <ul className="list-unstyled text-small">
               <li className="mb-1"><a className="link-secondary text-decoration-none" href="/">Equipo</a></li>
               <li className="mb-1"><a className="link-secondary text-decoration-none" href="/">Privacidad</a></li>
-              <li className="mb-1"><a className="link-secondary text-decoration-none" href="/">Terminos</a></li>
+              <li className="mb-1"><a className="link-secondary text-decoration-none" href="/politicas">Politicas</a></li>
             </ul>
           </div>
         </div>
