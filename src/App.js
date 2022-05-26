@@ -12,11 +12,14 @@ import { Test } from './paginas/test';
 import { Mensaje } from './paginas/mensaje';
 import { Shop } from './paginas/Shop';
 import { About } from './paginas/About';
+import { Politicas } from './paginas/Politicas';
 
 import {AdminLayout} from './admin/AdminLayout';
 import {Tablero} from './admin/Tablero';
 import {Productos} from './admin/Productos';
 import {NoPage} from './admin/NoPage';
+import { Perfil } from './admin/Perfil';
+import { Ajustes } from './admin/Ajustes';
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About/>} />
             <Route path="exito" element={<Exito/>} />
+            <Route path="politicas" element={<Politicas/>} />
             <Route path="*" element={<Error />} />
             <Route path="test" element={<Test/>} />
           </Route>  
@@ -40,6 +44,8 @@ function App() {
               <Route index element={<Tablero />} />
               <Route path="tablero" element={<Tablero />} />
               <Route path="productos" element={<Productos />} />
+              <Route path="perfil" element={<Perfil />} />
+              <Route path="ajustes" element={<Ajustes/>} />
               <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
