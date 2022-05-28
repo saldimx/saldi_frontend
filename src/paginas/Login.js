@@ -1,10 +1,11 @@
 import React, { useState }  from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom" 
+import { API_URL } from "../apis/endpoint";
 //import { encriptar } from "../apis/password";
 
 async function loginUser(email, newPassword) {
-	return fetch(`http://localhost:5000/login?&e=${email}&p=${newPassword}`, {
+	return fetch(`${API_URL}/login?&e=${email}&p=${newPassword}`, {
 	  method: 'POST',
 	  headers: {
 		'Content-Type': 'application/json'
