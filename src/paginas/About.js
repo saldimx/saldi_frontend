@@ -5,60 +5,71 @@ import React  from "react";
 export const About = () => {
     return (
         <>
-		<div className="container">
-      <div className="row">
-        <div className="offset-lg-2 col-lg-8 col-md-12 col-12 mb-12">
-   
-          <h1 className="display-2 fw-bold mb-3">Hola, somos <span className="text-primary">Saldi</span></h1>
-    
-          <p className="h3 mb-3 ">Saldi es una plataforma que te permite tener tu propia tienda en internet totalmente GRATIS.</p>
-          <p className="mb-0 h5 text-body lh-lg">Saldi es tu tienda en linea es una oportunidad para que incrementes tus ventas, tendras tu propia direccion web apra compartir con tus clientes o en tus redes sociales..</p>
-        <br/>
-		</div>
-		
-		<br/>
-		<hr/>
 
-		<div className="offset-lg-2 col-lg-8 col-md-12 col-12 mb-12">
-   
-		{/*<h1 class="display-4 fw-bold mb-3">Conoce a nuestro equipo</h1>*/}
-
-		<div className="gallery mb-12">
-		{/*<Slider/>*/}
-      </div>
-
-
-      <section class="pt-6 pt-md-8">
-      <div class="container pb-6 pb-md-8 border-bottom">
-        <div class="row align-items-center">
-          <div class="col-12 col-md">
-
-      
-            <h3 class="fw-bold mb-1">
-              Interested in joining our team?
-            </h3>
+<section className="py-8 py-md-11 ">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-10 col-lg-8 text-center">
 
            
-            <p class="fs-lg text-muted mb-5 mb-md-0">
-              Hit us up and we'll get in touch with you.
+            <h1 className="display-2">
+              Somos un equipo pequeño. Con ideas Grandes.
+            </h1>
+
+       
+            <p className="lead text-muted mb-7 mb-md-9">
+              Nuestro objetivo es que tu "Emprendedor" puedas vender tus productos en esta plataforma.
             </p>
 
           </div>
-          <div class="col-12 col-md-auto">
+        </div> 
+        <div className="row">
+          <div className="col-12">
 
-         
-            <a href="#!" class="btn btn-primary lift">
-              Apply now
-            </a>
+        
+            <div className="row gx-4">
+              <div className="col-2">
+
+           
+              </div>
+              <div className="col-3">
+
+                <img className="img-fluid rounded shadow-lg mb-4" src="https://landkit.goodthemes.co/assets/img/photos/photo-17.jpg" alt="..."/>
+
+                <img className="img-fluid rounded shadow-lg" src="https://landkit.goodthemes.co/assets/img/photos/photo-18.jpg" alt="..."/>
+
+              </div>
+              <div className="col-5">
+
+                <div className="row gx-5 mb-4">
+                  <div className="col-5">
+
+                    <img className="img-fluid rounded shadow-lg" src="https://landkit.goodthemes.co/assets/img/photos/photo-19.jpg" alt="..."/>
+
+                  </div>
+                  <div className="col-7">
+
+                    <img className="img-fluid rounded shadow-lg" src="https://landkit.goodthemes.co/assets/img/photos/photo-20.jpg" alt="..."/>
+
+                  </div>
+                </div> 
+
+                <img className="img-fluid rounded shadow-lg" src="https://landkit.goodthemes.co/assets/img/photos/photo-21.jpg" alt="...0"/>
+
+              </div>
+              <div className="col-2">
+
+           
+</div>
+            </div>
 
           </div>
-        </div>  
-      </div>  
+        </div> 
+      </div> 
     </section>
-    </div>
-      </div>
+  
+    
 
-    </div>
 
         </>
       )
