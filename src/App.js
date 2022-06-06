@@ -13,6 +13,7 @@ import { Mensaje } from './paginas/mensaje';
 import { Shop } from './paginas/Shop';
 import { About } from './paginas/About';
 import { Politicas } from './paginas/Politicas';
+import { Docu } from './paginas/Docu';
 
 import {AdminLayout} from './admin/AdminLayout';
 import {Tablero} from './admin/Tablero';
@@ -20,6 +21,8 @@ import {Productos} from './admin/Productos';
 import {NoPage} from './admin/NoPage';
 import { Perfil } from './admin/Perfil';
 import { Ajustes } from './admin/Ajustes';
+import { Terminos } from './paginas/Terminos';
+import { Vacantes } from './paginas/Vacantes';
 
 function App() {
   return (
@@ -28,8 +31,10 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About/>} />
+            <Route path="terminos" element={<Terminos/>} />
             <Route path="exito" element={<Exito/>} />
             <Route path="politicas" element={<Politicas/>} />
+            <Route path="vacantes" element={<Vacantes/>} />
             <Route path="*" element={<Error />} />
             <Route path="test" element={<Test/>} />
           </Route>  
@@ -39,6 +44,7 @@ function App() {
           <Route path="reset" element={<Reset />} />
           <Route path="shop/:id" element={<Shop/>}/>
           <Route path="mensaje/:id" element={<Mensaje/>} />
+          <Route path="documentation" element={<Docu/>} />
         
           <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Tablero />} />

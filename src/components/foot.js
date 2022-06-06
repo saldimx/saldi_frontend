@@ -115,7 +115,7 @@ export const Foot = () => {
                 </a>
               </li>
               <li className="mb-3">
-                <a href="#!" className="text-reset">
+                <a href="/about" className="text-reset">
                   Nosotros
                 </a>
               </li>
@@ -137,7 +137,7 @@ export const Foot = () => {
             </h6>
             <ul className="list-unstyled text-muted mb-0">
               <li className="mb-3">
-                <a href="#!" className="text-reset">
+                <a href="/documentation" className="text-reset">
                   Documentacion
                 </a>
               </li>
@@ -147,7 +147,7 @@ export const Foot = () => {
                 </a>
               </li>
               <li>
-                <a href="#!" className="text-reset">
+                <a href="/terminos" className="text-reset">
                   Terminos
                 </a>
               </li>

@@ -1,5 +1,8 @@
 import React  from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowRight} from "@fortawesome/free-solid-svg-icons"
 
+const arrow = <FontAwesomeIcon icon={faArrowRight} />
  
 export const Politicas = () => {
     return (
@@ -43,6 +46,34 @@ export const Politicas = () => {
         </div>
       </div>  
     </section>
+
+    <section data-jarallax="" data-speed=".8" 
+  className="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover jarallax v" 
+  data-jarallax-original-styles="background-image: url(assets/img/covers/cover-13.jpg);">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-10 col-lg-8 text-center">
+
+            <h1 className="display-2 text-white">
+              Want to work with us?
+            </h1>
+
+            <p className="lead text-white-75 mb-6">
+              Estamos en busqueda de el mejor talento para que se unan al equipo Saldi. Diseñadores, Ingenieros y Finanzas.
+            </p>
+   
+            <a href="/vacantes" className="btn btn-primary lift">
+              Mira las posiciones disponibles <i className="fe fe-arrow-right ms-3">{arrow}</i>
+            </a>
+          </div>
+        </div> 
+      </div> 
+    <div 
+      id="jarallax-container-0" 
+      className="s1">
+        <div className="s2"></div>
+    </div>
+  </section>
         </>
       )
     };
