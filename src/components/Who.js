@@ -8,11 +8,11 @@ export const Who = () => {
         <div className="row align-items-center">
           <div className="col-12 col-md-7 col-lg-6 aos-init aos-animate" data-aos="fade-right">
             <h2>
-              En saldi tenemos amplia experiencia <br/>
-              <span className="text-primary">construyendo espacios de EComerce para pymes</span>.
+              En saldi estamos comprometidos a ayudar al emprendedor  
+              <span className="text-primary"> construyendo espacios de EComerce para pymes</span>.
             </h2>
             <p className="fs-lg text-muted mb-6">
-              Hemos creado multiples plataformas de negocio y vendido licencias de nuestra plataforma SAAS.
+              Seguimos desarroyando herramientas nuevas para ti.
             </p>
            
             <div className="d-flex">
@@ -24,7 +24,7 @@ export const Who = () => {
                   En Saldi desarrollamos con las tecnologias mas modernas 
                 </h4>
                 <p className="text-muted mb-6">
-                  desde que se iniciamos este proyecto.
+                  para que tu tienda este a la vanguardia.
                 </p>
               </div>
             </div>
@@ -35,10 +35,10 @@ export const Who = () => {
               </div>
               <div className="ms-5">
                 <h4 className="mb-1">
-                  Nuestra comprensión profunda de estas tecnologias nos ha hecho crecer
+                  Nosotros nos encargamos de lo aburrido.
                 </h4>
                 <p className="text-muted mb-6 mb-md-0">
-                  y entender tus necesidades mejor que nadie.
+                  para que tu. Te enfoques en tu negocio.
                 </p>
               </div>
             </div>

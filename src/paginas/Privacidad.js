@@ -1,8 +1,6 @@
 import React  from "react";
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import { Slider } from "../components/slide";
  
-export const About = () => {
+export const Privacidad = () => {
     return (
         <>
 
@@ -30,7 +28,6 @@ export const About = () => {
             <div className="row gx-4">
               <div className="col-2">
 
-           
               </div>
               <div className="col-3">
 

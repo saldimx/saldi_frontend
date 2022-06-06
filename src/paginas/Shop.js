@@ -1,6 +1,7 @@
 import React  from "react";
 import { useParams } from "react-router";
-import image  from "../img/circled-s.png"; 
+//import image  from "../img/circled-s.png"; 
+import logo from "../img/logo.JPG";
 import '../css/style.css';
 //import { useNavigate } from "react-router-dom"
 
@@ -29,8 +30,8 @@ export const Shop = () => {
 			<header className="py-3 mb-4 border-bottom">
 			<div className="container d-flex flex-wrap justify-content-center">
 			<a href="/" className="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-			<img src={image} alt="Saldi"/>
-				<span className="fs-4 fw-bold">Saldi</span>
+			<img src={logo} alt="Saldi" width="70px"/>
+				{/*<span className="fs-4 fw-bold">Saldi</span>*/}
 			</a>
 			<form className="col-12 col-lg-auto mb-3 mb-lg-0">
 				<input type="search" className="form-control" placeholder="Search..." aria-label="Search"/>
