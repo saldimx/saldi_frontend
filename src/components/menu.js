@@ -1,5 +1,6 @@
 import React  from "react";
 import { Link } from "react-router-dom";
+import logo from "../img/logo.JPG";
 
 export const Menu = () => {
     return(
@@ -7,7 +8,7 @@ export const Menu = () => {
         <div className="container">
           <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-primary text-decoration-none fw-bold ">
-              Saldi
+              <img src={logo} alt="Saldi" width="70px"/>
             </a>
 
             <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
