@@ -17,7 +17,6 @@ async function loginUser(email, newPassword) {
 	})
 	  .then(data => data.json());
 	  //.then(data => console.log(data));
-	  
    }
 
 export const Login = () => {
@@ -35,9 +34,11 @@ export const Login = () => {
 		const res = await loginUser(email, newPassword);
 		setMensaje(res.message);
 		if(res.token){
-			navigate('/admin', { replace: true });
+			let id = res.idl
+			navigate(`/admin?id=${id}`, { replace: true });
 		}
 	}
+	
 
     return (
         <>
