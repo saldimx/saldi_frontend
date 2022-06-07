@@ -67,17 +67,17 @@ export const Foot = () => {
       
             <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
               <li className="mb-3">
-                <a href="#!" className="text-reset">
+                <a href="/" className="text-reset">
                   Salid Shop
                 </a>
               </li>
               <li className="mb-3">
-                <a href="#!" className="text-reset">
+                <a href="/inventario" className="text-reset">
                   Saldi Inventario
                 </a>
               </li>
               <li className="mb-3">
-                <a href="#!" className="text-reset">
+                <a href="/factura" className="text-reset">
                   Saldi Factura
                 </a>
               </li>

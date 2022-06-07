@@ -1,0 +1,30 @@
+{"jobs_list": [
+    {   
+        "vacante":"1010",
+        "role":"UX Designer",
+        "descripcion":"Responsable del diseño y manejo de marca.",
+        "equipo":"Producto",
+        "ubicacion":"Remoto"
+    },
+    {   
+        "vacante":"1011",
+        "role":"Senior Fullstack Software Engineer",
+        "descripcion":"Diseñar, desarrollar e implementar backend services.",
+        "equipo":"Producto",
+        "ubicacion":"Tijuana, BC"
+    },
+    {   
+        "vacante":"1012",
+        "role":"Frontend Engineer",
+        "descripcion":"Perfeccionar website performance.",
+        "equipo":"Producto",
+        "ubicacion":"Remoto"
+    },
+    {   
+        "vacante":"1013",
+        "role":"Comunity Manager",
+        "descripcion":"Construir y administrar comunidad online. Gestionar la identidad de Saldi.",
+        "equipo":"Producto",
+        "ubicacion":"Remoto"
+    }
+]}

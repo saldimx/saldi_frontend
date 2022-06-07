@@ -1,11 +1,9 @@
 import React  from "react";
-//import "../css/style.css"; 
+import jobs from "../mock/vacantes.json"; 
 
 export const Vacantes = () => {
-    return (
-        <>
 
-
+  return (
 
 <section className="pt-6 pt-md-8">
       <div className="container pb-8 pb-md-11 border-bottom border-gray-300">
@@ -28,11 +26,11 @@ export const Vacantes = () => {
               <div className="row">
                 <div className="col-12 col-md-4">
                   <div className="form-group mb-5 mb-md-0">
-                    <label className="form-label" for="applyRoles">Roles</label>
+                    <label className="form-label" htmlFor="applyRoles">Roles</label>
 
                
                     <select className="form-select" id="applyRoles">
-                      <option selected="">Roles</option>
+                      <option defaultValue="">Roles</option>
                       <option>Deseño</option>
                       <option>Enginieria</option>
                       <option>Producto</option>
@@ -45,9 +43,9 @@ export const Vacantes = () => {
                 </div>
                 <div className="col-12 col-md-4">
                   <div className="form-group mb-5 mb-md-0">
-                    <label className="form-label" for="applyTeam">Equipos</label>
+                    <label className="form-label" htmlFor="applyTeam">Equipos</label>
                     <select className="form-select" id="applyTeam">
-                      <option selected="">Equipos</option>
+                      <option defaultValue="">Equipos</option>
                       <option>Producto</option>
                       <option>Consultoria</option>
                       <option>Herramientas Internas</option>
@@ -56,9 +54,9 @@ export const Vacantes = () => {
                 </div>
                 <div className="col-12 col-md-4">
                   <div className="form-group mb-0">
-                    <label className="form-label" for="applyLocation">Location</label>
+                    <label className="form-label" htmlFor="applyLocation">Location</label>
                     <select className="form-select" id="applyLocation">
-                      <option selected="">Ubicaciones</option>
+                      <option defaultValue="">Ubicaciones</option>
                       <option>Tijuana</option>
                       <option>Remoto</option>
                     </select>
@@ -107,15 +105,21 @@ export const Vacantes = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
+              
 
-                      <a href="career-single.html" className="text-reset text-decoration-none">
+                {
+                jobs.jobs_list.map((value)=>{
+                  return(
+     
+                    <>
+                    <tr key={value.vacante}>
+                    <td>
+                      <a href="career-single.html" className="text-reset text-decoration-none" >
                         <p className="mb-1">
-                          UX Designer
+                        {value.role}
                         </p>
                         <p className="fs-sm text-muted mb-0">
-                          Responsable del diseño y manejo de marca.
+                        {value.descripcion}
                         </p>
                       </a>
 
@@ -124,7 +128,7 @@ export const Vacantes = () => {
 
                       <a href="career-single.html" className="text-reset text-decoration-none">
                         <p className="fs-sm mb-0">
-                          Producto
+                        {value.equipo}
                         </p>
                       </a>
 
@@ -133,108 +137,16 @@ export const Vacantes = () => {
 
                       <a href="career-single.html" className="text-reset text-decoration-none">
                         <p className="fs-sm mb-0">
-                          Remoto
+                        {value.ubicacion}
                         </p>
                       </a>
-
                     </td>
                   </tr>
-                  <tr>
-                    <td>
+                  </>
+                  );
+                })
+              }
 
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="mb-1">
-                          Senior Fullstack Software Engineer
-                        </p>
-                        <p className="fs-sm text-muted mb-0">
-                          Diseñar, desarrollar e implementar backend services. 
-                        </p>
-                      </a>
-
-                    </td>
-                    <td>
-
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="fs-sm mb-0">
-                          Producto
-                        </p>
-                      </a>
-
-                    </td>
-                    <td>
-
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="fs-sm mb-0">
-                          Tijuana, BC
-                        </p>
-                      </a>
-
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="mb-1">
-                          Frontend Engineer
-                        </p>
-                        <p className="fs-sm text-muted mb-0">
-                          Perfeccionar website performance.
-                        </p>
-                      </a>
-
-                    </td>
-                    <td>
-
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="fs-sm mb-0">
-                          Producto
-                        </p>
-                      </a>
-
-                    </td>
-                    <td>
-
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="fs-sm mb-0">
-                          Remoto
-                        </p>
-                      </a>
-
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="mb-1">
-                          Comunity Manager
-                        </p>
-                        <p className="fs-sm text-muted mb-0">
-                          Construir y administrar comunidad online. Gestionar la identidad de Saldi.
-                        </p>
-                      </a>
-
-                    </td>
-                    <td>
-
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="fs-sm mb-0">
-                          Producto
-                        </p>
-                      </a>
-
-                    </td>
-                    <td>
-
-                      <a href="career-single.html" className="text-reset text-decoration-none">
-                        <p className="fs-sm mb-0">
-                          Remoto
-                        </p>
-                      </a>
-
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -244,7 +156,7 @@ export const Vacantes = () => {
 
       </div>  
     </section>
-        </>
+    
       )
     };
 
