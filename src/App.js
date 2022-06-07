@@ -23,6 +23,8 @@ import { Perfil } from './admin/Perfil';
 import { Ajustes } from './admin/Ajustes';
 import { Terminos } from './paginas/Terminos';
 import { Vacantes } from './paginas/Vacantes';
+import { Inventario } from './paginas/Inventario';
+import { Factura } from './paginas/Factura';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
             <Route path="exito" element={<Exito/>} />
             <Route path="politicas" element={<Politicas/>} />
             <Route path="vacantes" element={<Vacantes/>} />
+            <Route path="inventario" element={<Inventario/>} />
+            <Route path="factura" element={<Factura/>} />
             <Route path="*" element={<Error />} />
             <Route path="test" element={<Test/>} />
           </Route>  

@@ -42,22 +42,20 @@ export const Terminos = () => {
 
            
             <p className="fs-lg text-gray-800 mb-6 mb-md-8">
-              Below are our Terms of Service, which outline a lot of legal goodies, but the bottom line is it’s our aim to always take care of both you, as a customer, or as a seller on our platform.
-            </p>
+            A continuación se encuentran nuestros Términos de servicio, que describen una gran cantidad de beneficios legales, pero la conclusión es que nuestro objetivo es cuidar siempre de usted, como cliente o como vendedor en nuestra plataforma.</p>
 
           
             <h3 className="mb-5">
-              Licensing Terms
+              Terminos
             </h3>
 
           
             <p className="text-gray-800">
-              By visiting and/or taking any action on Bootstrap Themes, you confirm that you are in agreement with and bound by the terms outlined below. These terms apply to the website, emails, or any other communication.
-            </p>
+            Al visitar y/o realizar cualquier acción en Saldi Shop, usted confirma que está de acuerdo con los términos que se describen a continuación y que está sujeto a ellos. Estos términos se aplican al sitio web, correos electrónicos o cualquier otra comunicación. </p>
 
           
             <p>
-              Here are terms of our Standard License:
+            Estos son los términos de nuestra licencia estándar:
             </p>
 
           
@@ -70,7 +68,7 @@ export const Terminos = () => {
 
       
               <p className="text-gray-800">
-                The Standard License grants you a non-exclusive right to make use of Theme you have purchased.
+              La Licencia estándar le otorga un derecho no exclusivo para hacer uso de las tiendas que ha creado.
               </p>
 
             </div>
@@ -83,8 +81,7 @@ export const Terminos = () => {
 
               
               <p className="text-gray-800">
-                You are licensed to use the Item to create one End Product for yourself or for one client (a “single application”), and the End Product can be distributed for Free.
-              </p>
+              Tiene licencia para usar la tienda por sí mismo (una "aplicación única"), y el Producto final se puede distribuir de forma gratuita.    </p>
 
             </div>
             <div className="d-flex">
@@ -96,8 +93,7 @@ export const Terminos = () => {
 
              
               <p className="text-gray-800">
-                If a Theme contains code, images, or content sourced from elsewhere under a different license, that item retains its original license. The license for the code, images, or content will be noted by the Theme author. You are responsible for adhering to the original license or clearing it with the author of the code, image, or content.
-              </p>
+              El autor de la tienda es dueño de imágenes o el contenido. Usted es responsable de adherirse a los terminos.     </p>
 
             </div>
             <div className="d-flex">
@@ -108,8 +104,7 @@ export const Terminos = () => {
 
              
               <p className="text-gray-800">
-                This license can be terminated if you breach it and you lose the right to distribute the End Product until the Theme has been fully removed from the End Product.
-              </p>
+              La tienda puede rescindirse si la infringe y pierde el derecho a distribuir el Producto final hasta que el Tema se elimine por completo del Producto final.  </p>
 
             </div>
             <div className="d-flex">
@@ -121,14 +116,13 @@ export const Terminos = () => {
 
      
               <p className="text-gray-800">
-                The author of the Theme retains ownership of the Theme, but grants you the license on these terms. This license is between the author of the Theme and you. Be Colossal LLC (Bootstrap Themes) are not a party to this license or the one granting you the license.
-              </p>
+              El autor de la tienda puede distribuirla en donde le sea conveniente.   </p>
 
             </div>
 
            
             <p>
-              If you opt for an Extended License:
+            Si opta por una licencia de pago:
             </p>
 
             <div className="d-flex">
@@ -140,20 +134,18 @@ export const Terminos = () => {
 
             
               <p className="text-gray-800 mb-6 mb-md-8">
-                You are licensed to use the Item to create one End Product for yourself or for one client (a “single application”), and the End Product maybe sold or distributed for free.
-              </p>
+              Tiene licencia para modifcar el diseño de la tienda o Producto final para usted o para un cliente (una "aplicación única"), y el Producto final puede venderse o distribuirse de forma gratuita.    </p>
 
             </div>
 
             
             <h3 className="mb-5">
-              Additional Terms
+            Terminos Adicionales 
             </h3>
 
            
             <p className="text-gray-800">
-              By visiting and/or taking any action on Bootstrap Themes, you confirm that you are in agreement with and bound by the terms outlined below. These terms apply to the website, emails, or any other communication.
-            </p>
+            Al visitar y/o realizar cualquier acción en Saldi.mx, usted confirma que está de acuerdo y obligado por los términos que se describen a continuación. Estos términos se aplican al sitio web, correos electrónicos o cualquier otra comunicación.  </p>
 
             <div className="d-flex">
 
@@ -164,8 +156,7 @@ export const Terminos = () => {
 
             
               <p className="text-gray-800">
-                All payments are processed securely through PayPal or Stripe. Bootstrap Themes does not directly process payments through the website.
-              </p>
+              Todos los pagos se procesan de forma segura a través de PayPal o Stripe. Saldi no procesa pagos directamente a través del sitio web.    </p>
 
             </div>
             <div className="d-flex">
@@ -177,7 +168,7 @@ export const Terminos = () => {
 
             
               <p className="text-gray-800">
-                You have 14 days to evaluate your purchase. If your purchase fails to meet expectations set by the seller, or is critically flawed in some way, contact Bootstrap Themes and we will issue a full refund pending a review.
+                Puedes hacer uso de tu tienda para vender cualquier producto.
               </p>
 
             </div>
@@ -189,8 +180,7 @@ export const Terminos = () => {
               </span>
 
               <p className="text-gray-800 mb-6 mb-md-0">
-                Membership is a benefit for those who follow our terms and policies. We may at any time suspend or terminate your account.
-              </p>
+              Ser usuario de esta plataforma es un beneficio para quienes siguen nuestros términos y políticas. En cualquier momento podemos suspender o cancelar su cuenta.      </p>
 
             </div>
 
