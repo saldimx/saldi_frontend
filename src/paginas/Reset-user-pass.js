@@ -18,6 +18,8 @@ export const Restoreuser = () => {
 				setMensaje(mensaje = 'La contraseña no coincide');
 				console.log(mensaje);
 			}else{
+				//Fetch endpoint to update password	
+
 				navigate('/mensaje/c', { replace: true });
 			}
 		}
