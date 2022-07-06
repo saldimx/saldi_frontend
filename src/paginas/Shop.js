@@ -5,6 +5,8 @@ import logo from "../img/logo.JPG";
 import '../css/style.css';
 //import { useNavigate } from "react-router-dom"
 
+import { useTienda } from '../api_rest/useTienda';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook} from "@fortawesome/free-brands-svg-icons"
 import { faInstagram} from "@fortawesome/free-brands-svg-icons"
@@ -21,6 +23,13 @@ export const Shop = () => {
 	//const navigate = useNavigate();
 	let {id} = useParams();
 	console.log(id);
+	const {data:dataStore, isLoading:isLoadingStore} = useTienda(id);
+	if(isLoadingStore){
+		return (
+		  <div>Loading!!!</div>
+		)}
+	
+	console.log(dataStore);
 	if(id==='test'){
 		return (
 		
@@ -37,7 +46,7 @@ export const Shop = () => {
 				<input type="search" className="form-control" placeholder="Search..." aria-label="Search"/>
 			</form>
 			</div>
-		</header>      
+			</header>      
 			</div>
 	
 			<div className="container px-3 py-2">
@@ -113,10 +122,64 @@ export const Shop = () => {
 		//navigate('/signup', { replace: true });
 		return(
 			<>
-			<div> Contactanos </div>
+			<div className="container py-3">
+				<header className="py-3 mb-4 border-bottom">
+					<div className="container d-flex flex-wrap justify-content-center">
+						<a href="/" className="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+							<img src={logo} alt="Saldi" width="70px"/>
+							{/*<span className="fs-4 fw-bold">Saldi</span>*/}
+						</a>
+						<form className="col-12 col-lg-auto mb-3 mb-lg-0">
+							<input type="search" className="form-control" placeholder="Search..." aria-label="Search"/>
+						</form>
+					</div>
+				</header>      
+			</div>
+			{dataStore.map((item, i) => {     
+				return(        
+				<>
+			<div className="container px-3 py-2"  key={i}>
+				<div className="row">
+					<div className="col-lg-8">
+						<h2 className="mt-2 display-6 lh-1 fw-bold" >{item.nom_tienda}</h2>  
+						<p className="fs-4">Encuentra las mejores camisas</p>
+						<p className="fs-5 ">Entregas a domicilio</p>
+						<p className="fs-5 "><span width="24" height="24">{whats}</span> +52 664 123 4567</p>
+						<ul className="nav col-md-4 justify-content list-unstyled d-flex">
+							<li className="ms-0"><a className="text-muted" href="/"><svg className="bi" width="24" height="24">{insta}</svg></a></li>
+							<li className="ms-3"><a className="text-muted" href="/"><svg className="bi" width="24" height="24">{fb}</svg></a></li>
+							<li className="ms-3"><a className="text-muted" href="/"><svg className="bi" width="24" height="24">{link}</svg></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+				<div className="container px-4 py-5" id="custom-cards">
+					<h2 className="pb-2 border-bottom"> </h2>
+					<div className="row">
+						<div className="grid">
+						{item.productosPortienda.map((producto, x) => {
+							return(
+							<>
+							<div className="card card-body"  key={x}>
+								<img className="img-fluid img_p" src="https://cartzilla.createx.studio/img/shop/catalog/33.jpg" alt="" />
+								<p>{producto.titulo}</p>
+								<h3 className="text-left">${producto.precio}</h3>
+								<div className="textRight">
+									<a className="p-2 link-secondary nodec" href="/products/2">Detalle</a>
+									<button className="boton boton-color boton-sm mrigth-2">Agregar al carrito</button>
+								</div>
+							</div>
+							</>
+							);
+						})}
+					</div>
+				</div>
+				</div>
+				</>
+				)
+			})}
 			</>			
 		);
-		
 	}
 }
 

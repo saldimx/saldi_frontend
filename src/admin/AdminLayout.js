@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom" 
 import '../css/dashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faShop, faDashboard, faGear, faQuestion, faUser } from "@fortawesome/free-solid-svg-icons"
+import { UserContext } from "../components/userContext";
 
 const tablero = <FontAwesomeIcon icon={faDashboard} />
 const productos = <FontAwesomeIcon icon={faShop} />
@@ -13,8 +15,16 @@ const gear = <FontAwesomeIcon icon={faGear} />
 const perfil = <FontAwesomeIcon icon={faUser} />
 const ayuda = <FontAwesomeIcon icon={faQuestion} />
 
+ 
 export const AdminLayout = () => {
-    return(
+  const {user, setUser} = useContext(UserContext);
+  console.log(user);
+  const navigate = useNavigate();
+  if (user===''){
+    navigate('/login');
+  }
+  
+  return(
     <>
     <header 
       className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -36,7 +46,7 @@ export const AdminLayout = () => {
         </button>
         <div className="navbar-nav">
           <div className="nav-item text-nowrap">
-            <a className="nav-link px-3" href="#a">Cerrar Sesion</a>
+            <button className="nav-link px-3" onClick={()=>setUser("")}>Logout</button>
           </div>
         </div>
       </header>
@@ -71,12 +81,13 @@ export const AdminLayout = () => {
               > {gear} Ajustes
               </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item">  
               <Link 
-                to="/admin/perfil"
+                to="/admin/perfil/"
                 className='nav-link' 
               > {perfil} Perfil
               </Link>
+          
               <Link 
                 to="/admin/ayuda"
                 className='nav-link' 
