@@ -1,7 +1,8 @@
 import React, { useState }  from "react";
 import { useNavigate } from "react-router-dom"; 
 import { Link } from "react-router-dom";
- 
+import { API_URL } from "../apis/endpoint"; //mn
+
 export const Reset = () => {
 	const [email, setEmail] = useState('');
 	const navigate = useNavigate();
@@ -9,7 +10,13 @@ export const Reset = () => {
 	const handleSubmit = (e) =>{
 		e.preventDefault();  
 		console.log(email)
-		
+				
+		fetch(`${API_URL}/restore?email=${email}`, { //mn
+			method: 'POST',
+			headers: {
+			  'Content-Type': 'application/json'
+			},
+		});
 		navigate('/mensaje/b', { replace: true });
 	}
     return (

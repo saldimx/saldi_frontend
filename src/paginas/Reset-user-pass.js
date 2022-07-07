@@ -1,13 +1,20 @@
 import React, { useState }  from "react";
 import { useNavigate } from "react-router-dom"; 
+import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import { API_URL } from "../apis/endpoint"; //mn
  
 export const Restoreuser = () => {
+	let {email} = useParams();
+	console.log(email);
+	let {key} = useParams();
+	console.log(key);
+
 	const [newPass, setNewPass] = useState('');
 	const [newPassConf, setNewPassConf] = useState('');
 	let [mensaje, setMensaje] = useState('');
 	const navigate = useNavigate();
-
+console.log(newPass)
 	const handleSubmit = (e) =>{
 		e.preventDefault();  
 		if (newPass.length <= 8 ){
@@ -19,7 +26,14 @@ export const Restoreuser = () => {
 				console.log(mensaje);
 			}else{
 				//Fetch endpoint to update password	
-
+				const cryptoSHA256 = require("crypto-js/sha256");
+          		const passX = cryptoSHA256(newPass);
+				fetch(`${API_URL}/reestablecer?e=${email}&k=${key}&p=${passX}`, { //mn
+					method: 'POST',
+					headers: {
+					  'Content-Type': 'application/json'
+					},
+				});
 				navigate('/mensaje/c', { replace: true });
 			}
 		}
