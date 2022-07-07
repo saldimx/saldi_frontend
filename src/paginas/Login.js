@@ -1,7 +1,8 @@
-import React, { useState }  from "react";
+import React, { useState, useContext }  from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom" 
 import { API_URL } from "../apis/endpoint";
+import { UserContext } from "../components/userContext";
 //import { encriptar } from "../apis/password";
 
 async function loginUser(email, newPassword) {
@@ -19,22 +20,35 @@ async function loginUser(email, newPassword) {
 	  //.then(data => console.log(data));
    }
 
+  
+
 export const Login = () => {
+	
+//	const {carrito, addToCarrito} = useContext(CartContext); 
+	const {user, setUser} = useContext(UserContext);
+	
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	//const [newPassword, setNewPassword] = useState('');
 	const [mensaje, setMensaje] = useState('');
+	
+	console.log(user);
+
 	const navigate = useNavigate();
 
+
+
 	const handleSubmit = async (e) => {
+
 		e.preventDefault();
 		//setNewPassword(encriptar(password));
 		const cryptoSHA256 = require("crypto-js/sha256");
 		const newPassword = cryptoSHA256(password);
 		const res = await loginUser(email, newPassword);
+		setUser(res);
 		setMensaje(res.message);
 		if(res.token){
-			let id = res.idl
+			let id = res.id
 			navigate(`/admin?id=${id}`, { replace: true });
 		}
 	}
@@ -81,10 +95,11 @@ export const Login = () => {
 						<Link to="/reset" className="">Olvidaste tu contraseña?</Link>
 					</label>
 				</div>
-				<button className="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
+				<button className="w-100 btn btn-lg btn-primary" type="submit" >Iniciar sesión</button>
 				<hr className="my-4"/>
 				<small className="text-muted">No tienes cuenta? Date de alta <Link to="/signup" className="text-link">Aqui.</Link></small>
 			</form>
+			<button onClick={()=>setUser("vega.obed@gmail.com")}>setUser</button>
 			<br/>
 			{ mensaje ? 
 			<div className="alert alert-danger" role="alert">
@@ -97,3 +112,5 @@ export const Login = () => {
         </>
       )
     };
+
+	

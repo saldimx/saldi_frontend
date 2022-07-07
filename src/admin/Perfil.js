@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { useProfile } from '../api_rest/useProfile';
+import { UserContext } from '../components/userContext';
  
 export const Perfil = () => {
- 
-  return (
+	const {data:dataUser, isLoading:isLoadingUser} = useProfile();
+	const msg = useContext(UserContext);
+	console.log(msg);
+	console.log(dataUser);
+	if(isLoadingUser){
+	  return (
+		<div>Loading!!!</div>
+	  );
+	}
+  	return (
     <>
+
         <div className="container-xl">
 		  <div className="row g-3 mb-4 align-items-center justify-content-between">
 				    <div className="col-auto">
@@ -40,6 +51,7 @@ export const Perfil = () => {
 							        </div>
 						        </div>
 						    </div>
+
 						    <div className="app-card-body px-4 w-100">
 							    <div className="item border-bottom py-3">
 								    <div className="row justify-content-between align-items-center">
@@ -54,41 +66,55 @@ export const Perfil = () => {
 									    </div>
 								    </div>
 							    </div>
-							    <div className="item border-bottom py-3">
-								    <div className="row justify-content-between align-items-center">
-									    <div className="col-auto">
-										    <div className="item-label"><strong>Name</strong></div>
-									        <div className="item-data">James Doe</div>
-									    </div>
-									    <div className="col text-end">
-										    <a className="btn-sm app-btn-secondary" href="/">Change</a>
-									    </div>
-								    </div>
-							    </div>
-							    <div className="item border-bottom py-3">
-								    <div className="row justify-content-between align-items-center">
-									    <div className="col-auto">
-										    <div className="item-label"><strong>Email</strong></div>
-									        <div className="item-data">james.doe@website.com</div>
-									    </div>
-									    <div className="col text-end">
-										    <a className="btn-sm app-btn-secondary" href="/">Change</a>
-									    </div>
-								    </div>
-							    </div>
-							    <div className="item border-bottom py-3">
-								    <div className="row justify-content-between align-items-center">
-									    <div className="col-auto">
-										    <div className="item-label"><strong>Website</strong></div>
-									        <div className="item-data">
-										        https://saldi.mx/shop/camisasdefutbol
-									        </div>
-									    </div>
-									    <div className="col text-end">
-										    <a className="btn-sm app-btn-secondary" href="/">Change</a>
-									    </div>
-								    </div>
-							    </div>
+								{dataUser.map((item, i) => {     
+								return(        
+									<><div className="item border-bottom py-3">
+										<div className="row justify-content-between align-items-center">
+											<div className="col-auto">
+												<div className="item-label"><strong>Name</strong></div>
+												<div className="item-data">{item.name} {item.lastname}</div>
+											</div>
+											<div className="col text-end">
+												<a className="btn-sm app-btn-secondary" href="/">Change</a>
+											</div>
+										</div>
+									</div><div className="item border-bottom py-3">
+											<div className="row justify-content-between align-items-center">
+												<div className="col-auto">
+													<div className="item-label"><strong>Email</strong></div>
+													<div className="item-data">{item.email}</div>
+												</div>{item.infoTienda.nom_tienda}
+												<div className="col text-end">
+													<a className="btn-sm app-btn-secondary" href="/">Change</a>
+												</div>
+											</div>
+										</div>
+										{item.infoTienda.map((tienda, x) => {
+										return(
+											<div className="item border-bottom py-3">
+											<div className="row justify-content-between align-items-center">
+												<div className="col-auto">
+													<div className="item-label"><strong>Website</strong></div>
+													<div className="item-data">
+														<a href={`https://saldi.mx/shop/${tienda.nom_tienda}`}  target="_blank" rel="noopener noreferrer">
+															https://saldi.mx/shop/{tienda.nom_tienda}
+														</a>
+													</div>
+												</div>
+												<div className="col text-end">
+													<a className="btn-sm app-btn-secondary" href="/">Change</a>
+												</div>
+											</div>
+										</div>
+											);
+										})}
+										</>
+
+							)
+							})}
+	
+
+
 							    <div className="item border-bottom py-3">
 								    <div className="row justify-content-between align-items-center">
 									    <div className="col-auto">

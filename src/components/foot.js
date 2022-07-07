@@ -29,11 +29,7 @@ export const Foot = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-4 col-lg-3">
-    
-         
             <img src={brand} alt="..." className="footer-brand img-fluid mb-2" width="70px"/>
-    
-         
             <p className="text-gray-700 mb-2">
               Tu tienda en linea.
             </p>
@@ -47,9 +43,7 @@ export const Foot = () => {
                 <a className="text-muted" href="https://www.facebook.com/www.saldi.mx">{fb}</a>
               </li>
               <li className="list-inline-item list-social-item me-3">
-                <a href="#!" className="text-decoration-none">
                   <a className="text-muted" href="https://www.facebook.com/www.saldi.mx">{twitter}</a>
-                </a>
               </li>
               <li className="list-inline-item list-social-item">
                 <a className="text-muted" href="https://www.linkedin.com/company/saldi-mx/">{link}</a>

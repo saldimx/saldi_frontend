@@ -10,16 +10,23 @@ export const Mensaje = () => {
 	let {id} = useParams();
 	let text1 ="";
 	let text2 ="";
-	if (id === "a"){
-		text1 = "Valida tu cuenta";
-		text2 =  "Hemos enviado un correo electronico a tu cuenta, revisalo para poder iniciar sesion."
-	}
 
-	if (id === "b"){
-		text1 = "Restablecer contraseña";
-		text2 =  "Hemos enviado un correo electronico a tu cuenta, revisalo para poder restablecer tu contraseña."
-	}
-
+	switch(id) {
+		case "a":
+			text1 = "Valida tu cuenta";
+			text2 =  "Hemos enviado un correo electronico a tu cuenta, revisalo para poder iniciar sesion."
+		  break;
+		case "b":
+			text1 = "Restablecer contraseña";
+			text2 =  "Hemos enviado un correo electronico a tu cuenta, revisalo para poder restablecer tu contraseña."
+		  break;
+		case "c":
+			text1 = "Tu Contraseña ha sido restablecida";
+			text2 =  "Te hemos enviado un correo electronico a tu cuenta, revisalo para poder iniciar sesion."
+			break;
+		default:
+		  // code block
+	  }
 
   
     return (
