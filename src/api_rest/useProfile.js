@@ -8,7 +8,9 @@ export function useProfile() {
   })
   useEffect(() => {
   const getData = () => {
-    fetch(`${API_URL}/getUser?e=vega.obed@gmail.com`)
+    fetch(`${API_URL}/profile?e=vega.obed@gmail.com`,{
+      method: 'POST'
+    })
       .then((res) => res.json())
       .then((res) => {
         setProfile({ data: res, isLoading: false })
@@ -20,4 +22,4 @@ export function useProfile() {
   }, [])
 
   return Profile
-}
+}                                                                

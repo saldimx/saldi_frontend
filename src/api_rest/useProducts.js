@@ -8,7 +8,7 @@ export function useProducts() {
   })
   useEffect(() => {
   const getData = () => {
-    fetch(`${API_URL}/getProducto?&tienda=0001`)
+    fetch(`${API_URL}/productos?&tienda=0001`)
       .then((res) => res.json())
       .then((res) => {
         setProducts({ data: res, isLoading: false })
