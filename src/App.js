@@ -70,8 +70,7 @@ function App() {
             <Route path="perfil" element={<Perfil />} />
             <Route path="ajustes" element={<Ajustes/>} />
             <Route path="*" element={<NoPage />} />
-           </Route>
-          
+           </Route>  
         </Routes>
       </BrowserRouter>
       </UserContext.Provider>
