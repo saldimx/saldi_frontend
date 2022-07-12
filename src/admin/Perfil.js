@@ -3,10 +3,11 @@ import { useProfile } from '../api_rest/useProfile';
 import { UserContext } from '../components/userContext';
  
 export const Perfil = () => {
-	const {data:dataUser, isLoading:isLoadingUser} = useProfile();
-	const msg = useContext(UserContext);
-	console.log(msg);
-	console.log(dataUser);
+	const user = useContext(UserContext);
+	const email = user.user.email;
+	const {data:dataUser, isLoading:isLoadingUser} = useProfile(email);
+
+
 	if(isLoadingUser){
 	  return (
 		<div>Loading!!!</div>
