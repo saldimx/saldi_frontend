@@ -1,9 +1,18 @@
 import React, {useContext} from 'react';
 import { UserContext } from '../components/userContext';
- 
+import { useTablero } from '../api_rest/useTablero'; 
+
 export const Tablero = () => {
 	const info = useContext(UserContext);
-	//console.log(info);
+	const email = info.user.email;
+	const {data:dataUser, isLoading:isLoadingUser} = useTablero(email);
+	console.log(dataUser);
+	if(isLoadingUser){
+		return (
+		  <div>Loading!!!</div>
+		);
+	}
+	
 	return (
     <>
         <div className="container-xl">
