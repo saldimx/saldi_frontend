@@ -19,7 +19,7 @@ const ayuda = <FontAwesomeIcon icon={faQuestion} />
  
 export const AdminLayout = () => {
   const {user, setUser} = useContext(UserContext);
-  console.log(user);
+  //console.log(user);
   const navigate = useNavigate();
   if (user===''){
     navigate('/login');
