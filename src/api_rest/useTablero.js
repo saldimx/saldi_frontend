@@ -9,7 +9,7 @@ export function useTablero(email) {
   useEffect(() => {
   const getData = () => {
     fetch(`${API_URL}/tablero?e=${email}`,{
-      method: 'POST'
+      method: 'GET'
     })
       .then((res) => res.json())
       .then((res) => {
