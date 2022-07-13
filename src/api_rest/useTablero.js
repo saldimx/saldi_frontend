@@ -1,23 +1,23 @@
 import  { useState, useEffect } from 'react';
 import { API_URL } from "../apis/endpoint";
 
-export function useProfile(email) {
-  const [Profile, setProfile] = useState({
+export function useTablero(email) {
+  const [Tablero, setTablero] = useState({
     data: {},
     isLoading: true,
   })
   useEffect(() => {
   const getData = () => {
-    fetch(`${API_URL}/profile?e=${email}`,{
+    fetch(`${API_URL}/tablero?e=${email}`,{
       method: 'POST'
     })
       .then((res) => res.json())
       .then((res) => {
-        setProfile({ data: res, isLoading: false })
+        setTablero({ data: res, isLoading: false })
       })
   }
     getData()
   }, [email])
 
-  return Profile
+  return Tablero
 }                                                                
