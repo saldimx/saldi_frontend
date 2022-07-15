@@ -11,7 +11,7 @@ export const Reset = () => {
 		e.preventDefault();  
 		console.log(email)
 				
-		fetch(`${API_URL}/restore?email=${email}`, { //mn
+		fetch(`${API_URL}/api/restore/${email}`, { 
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json'

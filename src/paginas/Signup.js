@@ -25,7 +25,7 @@ export const Signup = () => {
           const cryptoSHA256 = require("crypto-js/sha256");
           const passX = cryptoSHA256(pass1);
 
-          fetch(`${API_URL}/user?n=${name}&e=${email}&p=${passX}`, {
+          fetch(`${API_URL}/api/user/${name}/${email}/${passX}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

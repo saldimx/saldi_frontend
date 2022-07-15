@@ -7,7 +7,6 @@ export const Perfil = () => {
 	const email = user.user.email;
 	const {data:dataUser, isLoading:isLoadingUser} = useProfile(email);
 
-
 	if(isLoadingUser){
 	  return (
 		<div>Loading!!!</div>

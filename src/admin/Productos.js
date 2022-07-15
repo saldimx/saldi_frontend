@@ -10,9 +10,10 @@ const elimina = <FontAwesomeIcon icon={faTrash} />
 
  
 export const Productos = () => {
-  const {data:dataProduct, isLoading:isLoadingProducts} = useProducts();
-  const msg = useContext(UserContext);
-	console.log(msg);
+  const info = useContext(UserContext);
+  const idTienda = info.user.tienda;
+  const {data:dataProduct, isLoading:isLoadingProducts} = useProducts(idTienda);
+  
   if(isLoadingProducts){
     return (
       <div>Loading!!!</div>

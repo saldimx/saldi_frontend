@@ -8,7 +8,7 @@ export function useTablero(email) {
   })
   useEffect(() => {
   const getData = () => {
-    fetch(`${API_URL}/tablero?e=${email}`,{
+    fetch(`${API_URL}/api/tablero/${email}`,{
       method: 'GET'
     })
       .then((res) => res.json())

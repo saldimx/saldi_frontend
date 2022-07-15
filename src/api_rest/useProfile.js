@@ -8,7 +8,7 @@ export function useProfile(email) {
   })
   useEffect(() => {
   const getData = () => {
-    fetch(`${API_URL}/profile?e=${email}`,{
+    fetch(`${API_URL}/api/profile/${email}`,{
       method: 'POST'
     })
       .then((res) => res.json())

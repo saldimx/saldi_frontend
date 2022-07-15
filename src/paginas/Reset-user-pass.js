@@ -28,7 +28,7 @@ console.log(newPass)
 				//Fetch endpoint to update password	
 				const cryptoSHA256 = require("crypto-js/sha256");
           		const passX = cryptoSHA256(newPass);
-				fetch(`${API_URL}/reestablecer?e=${email}&k=${key}&p=${passX}`, { //mn
+				fetch(`${API_URL}/api/reestablecer/${email}/${key}/${passX}`, { //mn
 					method: 'POST',
 					headers: {
 					  'Content-Type': 'application/json'

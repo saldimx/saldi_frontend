@@ -8,7 +8,7 @@ export function useTienda(store) {
   })
   useEffect(() => {
   const getData = () => {
-    fetch(`${API_URL}/store?&tienda=${store}`)
+    fetch(`${API_URL}/api/store/${store}`)
       .then((res) => res.json())
       .then((res) => {
         setProducts({ data: res, isLoading: false })
