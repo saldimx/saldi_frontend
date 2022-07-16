@@ -17,7 +17,7 @@ export const NewProduct = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () =>{
-    fetch(`${API_URL}/productos?parm1=${titulo}&parm2=${precio}&parm3=${imagen}&parm4=${descripcion}&parm5=${categoria}&parm6=${idTienda}`, {
+    fetch(`${API_URL}/api/productos/${titulo}/${precio}/${imagen}/${descripcion}/${categoria}/${idTienda}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
