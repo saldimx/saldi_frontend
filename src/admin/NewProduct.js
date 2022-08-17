@@ -9,10 +9,13 @@ export const NewProduct = () => {
   const [imagen, setImagen] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [categoria, setCategoria] = useState('');
-  const [idTienda, setidTienda] = useState('');
+  //const [idTienda, setidTienda] = useState('');
  
   const info = useContext(UserContext);
-  setidTienda(info.user.tienda);
+  console.log(info);
+  const idTienda = info.user.tienda;
+  console.log(idTienda);
+    
 
   const navigate = useNavigate();
 
