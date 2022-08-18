@@ -8,7 +8,6 @@ import { useProducts } from '../api_rest/useProducts';
 const plus = <FontAwesomeIcon icon={faPlus} /> 
 const elimina = <FontAwesomeIcon icon={faTrash} /> 
 
- 
 export const Productos = () => {
   const {data:dataProduct, isLoading:isLoadingProducts} = useProducts();
   const msg = useContext(UserContext);
