@@ -1,23 +1,23 @@
 import  { useState, useEffect } from 'react';
 import { API_URL } from "../apis/endpoint";
 
-export function useProfile(email) {
-  const [Profile, setProfile] = useState({
+export function useIdTienda(email) {
+  const [Tienda, setIdTienda] = useState({
     data: {},
     isLoading: true,
   })
   useEffect(() => {
   const getData = () => {
-    fetch(`${API_URL}/api/profile/${email}`,{
+    fetch(`${API_URL}/api/tienda/${email}`,{
       method: 'POST'
     })
       .then((res) => res.json())
       .then((res) => {
-        setProfile({ data: res, isLoading: false })
+        setIdTienda({ data: res, isLoading: false })
       })
   }
     getData()
   }, [email])
 
-  return Profile
+  return Tienda
 }                                                                

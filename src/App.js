@@ -53,7 +53,6 @@ function App() {
             <Route path="test" element={<Test/>} />
           </Route>  
 
-
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="reset" element={<Reset />} />
@@ -71,8 +70,7 @@ function App() {
             <Route path="perfil" element={<Perfil />} />
             <Route path="ajustes" element={<Ajustes/>} />
             <Route path="*" element={<NoPage />} />
-           </Route>
-          
+           </Route>  
         </Routes>
       </BrowserRouter>
       </UserContext.Provider>

@@ -6,7 +6,7 @@ import { UserContext } from "../components/userContext";
 //import { encriptar } from "../apis/password";
 
 async function loginUser(email, newPassword) {
-	return fetch(`${API_URL}/login?&e=${email}&p=${newPassword}`, {
+	return fetch(`${API_URL}/api/login/${email}/${newPassword}`, {
 	  method: 'POST',
 	  headers: {
 		'Content-Type': 'application/json'

@@ -5,14 +5,20 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { faTrash } from "@fortawesome/free-solid-svg-icons"
 import { useProducts } from '../api_rest/useProducts';
 
+
 const plus = <FontAwesomeIcon icon={faPlus} /> 
 const elimina = <FontAwesomeIcon icon={faTrash} /> 
 
 export const Productos = () => {
-  const {data:dataProduct, isLoading:isLoadingProducts} = useProducts();
-  const msg = useContext(UserContext);
-	console.log(msg);
-  if(isLoadingProducts){
+  const info = useContext(UserContext);
+  const idTienda = info.user.tienda;
+  console.log(idTienda);
+ 
+  const {data:dataProduct, isLoading:isLoadingProducts} = useProducts(idTienda);
+ 
+  
+  
+  if(isLoadingProducts ){
     return (
       <div>Loading!!!</div>
     );

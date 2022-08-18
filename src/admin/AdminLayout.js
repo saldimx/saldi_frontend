@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom" 
 import '../css/dashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import { Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -18,7 +19,7 @@ const ayuda = <FontAwesomeIcon icon={faQuestion} />
  
 export const AdminLayout = () => {
   const {user, setUser} = useContext(UserContext);
-  console.log(user);
+  //console.log(user);
   const navigate = useNavigate();
   if (user===''){
     navigate('/login');

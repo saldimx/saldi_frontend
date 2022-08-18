@@ -1,9 +1,18 @@
 import React, {useContext} from 'react';
 import { UserContext } from '../components/userContext';
- 
+import { useTablero } from '../api_rest/useTablero'; 
+
 export const Tablero = () => {
-	const msg = useContext(UserContext);
-	console.log(msg.name);
+	const info = useContext(UserContext);
+	const email = info.user.email;
+	const {data:dataUser, isLoading:isLoadingUser} = useTablero(email);
+	console.log(dataUser);
+	if(isLoadingUser){
+		return (
+		  <div>Loading!!!</div>
+		);
+	}
+	
 	return (
     <>
         <div className="container-xl">
@@ -24,7 +33,7 @@ export const Tablero = () => {
 			<div className="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
 			    <div className="inner">
 				    <div className="app-card-body p-3 p-lg-4">
-					    <h3 className="mb-3">Welcome, {msg.name}!</h3>
+					    <h3 className="mb-3">Welcome, {info.user.name}!</h3>
 					    <div className="row gx-5 gy-3">
 					        <div className="col-12 col-lg-9">        
 							    <div>Portal is a free Bootstrap 5 admin dashboard template. The design is simple, clean and modular so it's a great base for building any modern web app.</div>

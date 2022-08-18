@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import { UserContext } from '../components/userContext';
 import { API_URL } from "../apis/endpoint"; 
 import { useNavigate } from "react-router-dom" ;
  
@@ -8,14 +9,18 @@ export const NewProduct = () => {
   const [imagen, setImagen] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [categoria, setCategoria] = useState('');
-  const [tienda, setTienda] = useState('');
+  //const [idTienda, setidTienda] = useState('');
  
-  setTienda('0001');
-   
+  const info = useContext(UserContext);
+  console.log(info);
+  const idTienda = info.user.tienda;
+  console.log(idTienda);
+    
+
   const navigate = useNavigate();
 
   const handleSubmit = () =>{
-    fetch(`${API_URL}/productos?parm1=${titulo}&parm2=${precio}&parm3=${imagen}&parm4=${descripcion}&parm5=${categoria}&parm6=${tienda}`, {
+    fetch(`${API_URL}/api/productos/${titulo}/${precio}/${imagen}/${descripcion}/${categoria}/${idTienda}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
