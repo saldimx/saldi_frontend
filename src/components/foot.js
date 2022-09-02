@@ -82,14 +82,19 @@ export const Foot = () => {
     
         
             <h6 className="fw-bold text-uppercase text-gray-700">
-              Servicios
+              Recursos
             </h6>
     
          
             <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
               <li className="mb-3">
-                <a href="#!" className="text-reset">
-                  Desarrollo de Software
+                <a href="https://monumental-narwhal-a4b971.netlify.app/blog" target="_blank" rel="noopener noreferrer" className="text-reset">
+                  Blog
+                </a>
+              </li>
+              <li className="mb-3">
+                <a href="https://monumental-narwhal-a4b971.netlify.app" target="_blank" rel="noopener noreferrer" className="text-reset">
+                  Docs
                 </a>
               </li>
             </ul>
@@ -99,27 +104,12 @@ export const Foot = () => {
     
         
             <h6 className="fw-bold text-uppercase text-gray-700">
-              Conocenos
+              Soporte
             </h6>
   
             <ul className="list-unstyled text-muted mb-0">
               <li className="mb-3">
-                <a href="#!" className="text-reset">
-                  Equipo
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="/about" className="text-reset">
-                  Nosotros
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="/politicas" className="text-reset">
-                  Oportunidades
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="#!" className="text-reset">
+                <a href="https://monumental-narwhal-a4b971.netlify.app/blog" target="_blank" rel="noopener noreferrer" className="text-reset">
                   Blog
                 </a>
               </li>
@@ -127,22 +117,22 @@ export const Foot = () => {
           </div>
           <div className="col-6 col-md-4 col-lg-2">
             <h6 className="fw-bold text-uppercase text-gray-700">
-              Legal
+              Compañia
             </h6>
             <ul className="list-unstyled text-muted mb-0">
               <li className="mb-3">
-                <a href="/documentation" className="text-reset">
-                  Documentacion
+                <a href="/about" className="text-reset">
+                  Conocenos
                 </a>
               </li>
               <li className="mb-3">
-                <a href="#!" className="text-reset">
-                  Privacidad
+                <a href="/vacantes" target="_blank" rel="noopener noreferrer" className="text-reset">
+                  Trabajos
                 </a>
               </li>
               <li>
                 <a href="/terminos" className="text-reset">
-                  Terminos
+                  Terminos de uso
                 </a>
               </li>
             </ul>
