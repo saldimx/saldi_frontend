@@ -32,7 +32,7 @@ export const Home = () => {
 
  
             <div className="text-center text-md-start">
-              <a href="/shop/test" className="btn btn-primary  ">
+              <a href="/shop/mock" className="btn btn-primary  ">
                 Echa un vistazo <i className="fe fe-arrow-right d-none d-md-inline ms-3"></i>
               </a>
             </div>
