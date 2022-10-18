@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import { API_URL } from "../apis/endpoint";
+const { API_URL } = process.env;
 
 export function useTablero(email) {
   const [Tablero, setTablero] = useState({

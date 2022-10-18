@@ -1,12 +1,12 @@
 import React, { useState, useContext }  from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom" 
-import { API_URL } from "../apis/endpoint";
 import { UserContext } from "../components/userContext";
-//import { encriptar } from "../apis/password";
+
+const { REACT_APP_API_URL } = process.env;
 
 async function loginUser(email, newPassword) {
-	return fetch(`${API_URL}/api/login/${email}/${newPassword}`, {
+	return fetch(`${REACT_APP_API_URL}/api/login/${email}/${newPassword}`, {
 	  method: 'POST',
 	  headers: {
 		'Content-Type': 'application/json'
